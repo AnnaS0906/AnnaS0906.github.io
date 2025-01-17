@@ -43,20 +43,27 @@
             font-size: 1em;
         }
         .resume-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #000;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1em;
-            margin-top: 20px;
-            transition: transform 0.2s;
-        }
-        .resume-btn:hover {
-            transform: scale(1.1);
-            background: #333;
-        }
+    display: inline-block;
+    padding: 10px 20px;
+    background: #000; /* 黑色背景 */
+    color: #fff; /* 白色文字 */
+    text-decoration: none;
+    border: none;
+    border-radius: 30px; /* 圆角按钮 */
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase; /* 全部字母大写 */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-btn:hover {
+    transform: scale(1.05); /* 鼠标悬停时放大效果 */
+    background: #333; /* 加深背景色 */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* 增加阴影 */
+}
+
         .sections {
             display: flex;
             justify-content: center;
@@ -149,10 +156,6 @@
             document.querySelector('.sections').style.display = 'flex';
             document.querySelectorAll('.detail-section').forEach(section => section.classList.remove('active'));
         }
-
-        function showProjectDetails(title, description) {
-            alert(`Project: ${title}\nDescription: ${description}`);
-        }
     </script>
 </head>
 <body>
@@ -162,7 +165,8 @@
         <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
         <p>Phone: <a href="tel:1234567890">(123) 456-7890</a></p>
         <p>LinkedIn: <a href="https://linkedin.com/in/example" target="_blank">linkedin.com/in/example</a></p>
-        <a href="#" class="resume-btn" onclick="window.open('resume.pdf', '_blank')">View Resume</a>
+        <a href="resume.pdf" class="resume-btn" target="_blank">Resume</a>
+
     </div>
 
     <div class="sections">
@@ -181,25 +185,33 @@
         <a href="#" class="back-button" onclick="goBack()">Back</a>
         <h2>Data Analysis</h2>
         <div class="projects">
-            <div class="project" onclick="showProjectDetails('Multi-Agent', 'Robust Adaptive Control')">
-                <img src="placeholder1.jpg" alt="Project Placeholder">
-                <h3>Multi-Agent</h3>
-                <p>Robust Adaptive Control</p>
+            <div class="project">
+                <a href="https://example.com/project1" target="_blank">
+                    <img src="placeholder1.jpg" alt="Project Placeholder">
+                    <h3>Multi-Agent</h3>
+                    <p>Robust Adaptive Control</p>
+                </a>
             </div>
-            <div class="project" onclick="showProjectDetails('Project 2', 'Data Visualization Techniques')">
-                <img src="placeholder2.jpg" alt="Project Placeholder">
-                <h3>Project 2</h3>
-                <p>Data Visualization Techniques</p>
+            <div class="project">
+                <a href="https://example.com/project2" target="_blank">
+                    <img src="placeholder2.jpg" alt="Project Placeholder">
+                    <h3>Project 2</h3>
+                    <p>Data Visualization Techniques</p>
+                </a>
             </div>
-            <div class="project" onclick="showProjectDetails('Project 3', 'Big Data Analysis')">
-                <img src="placeholder3.jpg" alt="Project Placeholder">
-                <h3>Project 3</h3>
-                <p>Big Data Analysis</p>
+            <div class="project">
+                <a href="https://example.com/project3" target="_blank">
+                    <img src="placeholder3.jpg" alt="Project Placeholder">
+                    <h3>Project 3</h3>
+                    <p>Big Data Analysis</p>
+                </a>
             </div>
-            <div class="project" onclick="showProjectDetails('Project 4', 'Machine Learning Models')">
-                <img src="placeholder4.jpg" alt="Project Placeholder">
-                <h3>Project 4</h3>
-                <p>Machine Learning Models</p>
+            <div class="project">
+                <a href="https://example.com/project4" target="_blank">
+                    <img src="placeholder4.jpg" alt="Project Placeholder">
+                    <h3>Project 4</h3>
+                    <p>Machine Learning Models</p>
+                </a>
             </div>
         </div>
     </div>
@@ -208,25 +220,33 @@
         <a href="#" class="back-button" onclick="goBack()">Back</a>
         <h2>Financial Analysis</h2>
         <div class="projects">
-            <div class="project" onclick="showProjectDetails('Investment Strategies', 'Portfolio Management')">
-                <img src="placeholder5.jpg" alt="Project Placeholder">
-                <h3>Investment Strategies</h3>
-                <p>Portfolio Management</p>
+            <div class="project">
+                <a href="https://example.com/project5" target="_blank">
+                    <img src="placeholder5.jpg" alt="Project Placeholder">
+                    <h3>Investment Strategies</h3>
+                    <p>Portfolio Management</p>
+                </a>
             </div>
-            <div class="project" onclick="showProjectDetails('Risk Assessment', 'Credit Scoring Models')">
-                <img src="placeholder6.jpg" alt="Project Placeholder">
-                <h3>Risk Assessment</h3>
-                <p>Credit Scoring Models</p>
+            <div class="project">
+                <a href="https://example.com/project6" target="_blank">
+                    <img src="placeholder6.jpg" alt="Project Placeholder">
+                    <h3>Risk Assessment</h3>
+                    <p>Credit Scoring Models</p>
+                </a>
             </div>
-            <div class="project" onclick="showProjectDetails('Stock Analysis', 'Market Trends')">
-                <img src="placeholder7.jpg" alt="Project Placeholder">
-                <h3>Stock Analysis</h3>
-                <p>Market Trends</p>
+            <div class="project">
+                <a href="https://example.com/project7" target="_blank">
+                    <img src="placeholder7.jpg" alt="Project Placeholder">
+                    <h3>Stock Analysis</h3>
+                    <p>Market Trends</p>
+                </a>
             </div>
-            <div class="project" onclick="showProjectDetails('Financial Forecasting', 'Predictive Models')">
-                <img src="placeholder8.jpg" alt="Project Placeholder">
-                <h3>Financial Forecasting</h3>
-                <p>Predictive Models</p>
+            <div class="project">
+                <a href="https://example.com/project8" target="_blank">
+                    <img src="placeholder8.jpg" alt="Project Placeholder">
+                    <h3>Financial Forecasting</h3>
+                    <p>Predictive Models</p>
+                </a>
             </div>
         </div>
     </div>
@@ -235,25 +255,33 @@
         <a href="#" class="back-button" onclick="goBack()">Back</a>
         <h2>Risk Analysis</h2>
         <div class="projects">
-            <div class="project" onclick="showProjectDetails('Operational Risks', 'Process Optimization')">
-                <img src="placeholder9.jpg" alt="Project Placeholder">
-                <h3>Operational Risks</h3>
-                <p>Process Optimization</p>
+            <div class="project">
+                <a href="https://example.com/project9" target="_blank">
+                    <img src="placeholder9.jpg" alt="Project Placeholder">
+                    <h3>Operational Risks</h3>
+                    <p>Process Optimization</p>
+                </a>
             </div>
-            <div class="project" onclick="showProjectDetails('Market Risks', 'Volatility Analysis')">
-                <img src="placeholder10.jpg" alt="Project Placeholder">
-                <h3>Market Risks</h3>
-                <p>Volatility Analysis</p>
+            <div class="project">
+                <a href="https://example.com/project10" target="_blank">
+                    <img src="placeholder10.jpg" alt="Project Placeholder">
+                    <h3>Market Risks</h3>
+                    <p>Volatility Analysis</p>
+                </a>
             </div>
-            <div class="project" onclick="showProjectDetails('Credit Risks', 'Loan Default Models')">
-                <img src="placeholder11.jpg" alt="Project Placeholder">
-                <h3>Credit Risks</h3>
-                <p>Loan Default Models</p>
+            <div class="project">
+                <a href="https://example.com/project11" target="_blank">
+                    <img src="placeholder11.jpg" alt="Project Placeholder">
+                    <h3>Credit Risks</h3>
+                    <p>Loan Default Models</p>
+                </a>
             </div>
-            <div class="project" onclick="showProjectDetails('Compliance Risks', 'Regulatory Adherence')">
-                <img src="placeholder12.jpg" alt="Project Placeholder">
-                <h3>Compliance Risks</h3>
-                <p>Regulatory Adherence</p>
+            <div class="project">
+                <a href="https://example.com/project12" target="_blank">
+                    <img src="placeholder12.jpg" alt="Project Placeholder">
+                    <h3>Compliance Risks</h3>
+                    <p>Regulatory Adherence</p>
+                </a>
             </div>
         </div>
     </div>
