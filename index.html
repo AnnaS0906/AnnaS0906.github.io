@@ -43,26 +43,26 @@
             font-size: 1em;
         }
         .resume-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #000; /* 黑色背景 */
-    color: #fff; /* 白色文字 */
-    text-decoration: none;
-    border: none;
-    border-radius: 30px; /* 圆角按钮 */
-    font-size: 1em;
-    font-weight: bold;
-    text-transform: uppercase; /* 全部字母大写 */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+            display: inline-block;
+            padding: 10px 20px;
+            background: #000; /* 黑色背景 */
+            color: #fff !important; /* 强制白色字体 */
+            text-decoration: none;
+            border-radius: 30px; /* 圆角按钮 */
+            font-size: 1em;
+            font-weight: bold;
+            text-transform: uppercase; /* 全部字母大写 */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.resume-btn:hover {
-    transform: scale(1.05); /* 鼠标悬停时放大效果 */
-    background: #333; /* 加深背景色 */
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* 增加阴影 */
-}
+
+            .resume-btn:hover {
+                transform: scale(1.05); /* 鼠标悬停时放大效果 */
+                background: #333; /* 加深背景色 */
+                box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* 增加阴影 */
+            }
 
         .sections {
             display: flex;
@@ -165,7 +165,7 @@
         <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
         <p>Phone: <a href="tel:1234567890">(123) 456-7890</a></p>
         <p>LinkedIn: <a href="https://linkedin.com/in/example" target="_blank">linkedin.com/in/example</a></p>
-        <a href="resume.pdf" class="resume-btn" target="_blank">Resume</a>
+        <a href="resume.pdf" class="resume-btn" style="color: #fff;" target="_blank">Resume</a>
 
     </div>
 
