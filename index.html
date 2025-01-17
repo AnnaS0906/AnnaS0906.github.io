@@ -137,13 +137,15 @@
     </style>
     <script>
         function showSection(sectionId) {
-            document.querySelectorAll('.intro-container').forEach(section => section.style.display = 'none');
+            document.querySelector('.intro-container').style.display = 'none';
+            document.querySelector('.sections').style.display = 'none';
             document.querySelectorAll('.detail-section').forEach(section => section.classList.remove('active'));
             document.getElementById(sectionId).classList.add('active');
         }
 
         function goBack() {
-            document.querySelectorAll('.intro-container').forEach(section => section.style.display = 'flex');
+            document.querySelector('.intro-container').style.display = 'flex';
+            document.querySelector('.sections').style.display = 'flex';
             document.querySelectorAll('.detail-section').forEach(section => section.classList.remove('active'));
         }
     </script>
