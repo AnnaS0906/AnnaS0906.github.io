@@ -17,7 +17,6 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
             text-align: center;
             background: linear-gradient(135deg, #ffffff, #f5f5f5);
             padding: 20px;
@@ -39,9 +38,8 @@
             color: #555;
         }
         .intro-container a {
-            margin: 10px;
             text-decoration: none;
-            color: #fff;
+            color: #000;
             font-size: 1em;
         }
         .resume-btn {
@@ -74,10 +72,11 @@
             padding: 20px;
             cursor: pointer;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
+            transition: transform 0.2s, background 0.2s;
         }
         .section:hover {
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background: #000;
+            color: #fff;
             transform: scale(1.05);
         }
         .detail-section {
@@ -90,7 +89,7 @@
         .back-button {
             position: absolute;
             top: 20px;
-            right: 20px;
+            left: 20px;
             background: #000;
             color: #fff;
             padding: 10px;
@@ -138,18 +137,14 @@
     </style>
     <script>
         function showSection(sectionId) {
-            document.querySelectorAll('.detail-section').forEach(section => {
-                section.classList.remove('active');
-            });
+            document.querySelectorAll('.intro-container').forEach(section => section.style.display = 'none');
+            document.querySelectorAll('.detail-section').forEach(section => section.classList.remove('active'));
             document.getElementById(sectionId).classList.add('active');
-            document.getElementById('main-content').style.display = 'none';
         }
 
         function goBack() {
-            document.querySelectorAll('.detail-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById('main-content').style.display = 'block';
+            document.querySelectorAll('.intro-container').forEach(section => section.style.display = 'flex');
+            document.querySelectorAll('.detail-section').forEach(section => section.classList.remove('active'));
         }
     </script>
 </head>
@@ -158,22 +153,20 @@
         <h1>Huanhuan (Anna) SHEN</h1>
         <h2>Data Analyst | Financial Analyst | Risk Manager</h2>
         <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
-        <p>Phone: (123) 456-7890</p>
+        <p>Phone: <a href="tel:1234567890">(123) 456-7890</a></p>
         <p>LinkedIn: <a href="https://linkedin.com/in/example" target="_blank">linkedin.com/in/example</a></p>
         <a href="#" class="resume-btn" onclick="window.open('resume.pdf', '_blank')">View Resume</a>
     </div>
 
-    <div id="main-content">
-        <div class="sections">
-            <div class="section" onclick="showSection('data-analysis')">
-                <h3>Data Analysis</h3>
-            </div>
-            <div class="section" onclick="showSection('financial-analysis')">
-                <h3>Financial Analysis</h3>
-            </div>
-            <div class="section" onclick="showSection('risk-analysis')">
-                <h3>Risk Analysis</h3>
-            </div>
+    <div class="sections">
+        <div class="section" onclick="showSection('data-analysis')">
+            <h3>Data Analysis</h3>
+        </div>
+        <div class="section" onclick="showSection('financial-analysis')">
+            <h3>Financial Analysis</h3>
+        </div>
+        <div class="section" onclick="showSection('risk-analysis')">
+            <h3>Risk Analysis</h3>
         </div>
     </div>
 
