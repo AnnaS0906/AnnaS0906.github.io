@@ -9,35 +9,40 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f9f9f9;
+            background: #ffffff;
             color: #333;
         }
-        header {
-            background: #333;
-            color: #fff;
+        .intro-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             text-align: center;
+            background: linear-gradient(135deg, #ffffff, #f5f5f5);
             padding: 20px;
         }
-        header h1 {
+        .intro-container h1 {
+            font-size: 3em;
+            font-weight: bold;
             margin: 0;
-            font-size: 2.5em;
+            color: #333;
         }
-        header h2 {
+        .intro-container h2 {
+            font-size: 1.5em;
             margin: 10px 0;
-            font-weight: normal;
-            font-size: 1.2em;
+            color: #666;
         }
-        .info {
-            text-align: center;
-            padding: 20px;
-        }
-        .info p {
+        .intro-container p {
             margin: 10px 0;
+            font-size: 1em;
+            color: #555;
         }
-        .info a {
+        .intro-container a {
             margin: 10px;
             text-decoration: none;
             color: #0073e6;
+            font-size: 1em;
         }
         .resume-btn {
             display: inline-block;
@@ -46,9 +51,32 @@
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
+            font-size: 1em;
             margin-top: 20px;
         }
         .resume-btn:hover {
+            background: #005bb5;
+        }
+        .icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #0073e6;
+            border-radius: 50%;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+        .icons a:hover {
             background: #005bb5;
         }
         .sections {
@@ -140,20 +168,21 @@
     </script>
 </head>
 <body>
-    <header>
+    <div class="intro-container">
         <h1>Huanhuan (Anna) SHEN</h1>
-        <h2>Title</h2>
-    </header>
+        <h2>Data Analyst | Financial Analyst | Risk Manager</h2>
+        <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
+        <p>Phone: (123) 456-7890</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/example" target="_blank">linkedin.com/in/example</a></p>
+        <a href="#" class="resume-btn" onclick="window.open('resume.pdf', '_blank')">View Resume</a>
+        <div class="icons">
+            <a href="#"><i class="fa fa-graduation-cap"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </div>
 
     <div id="main-content">
-        <div class="info">
-            <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
-            <p>Phone: (123) 456-7890</p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/example" target="_blank">linkedin.com/in/example</a></p>
-            <p>Skills: Data Analysis, Financial Analysis, Risk Management</p>
-            <a href="#" class="resume-btn" onclick="window.open('resume.pdf', '_blank')">Resume</a>
-        </div>
-
         <div class="sections">
             <div class="section" onclick="showSection('data-analysis')">
                 <h3>Data Analysis</h3>
